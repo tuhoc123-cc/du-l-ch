@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vịnh Hạ Long - Kỳ quan thiên nhiên thế giới</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1e40af;
+            --secondary: #0369a1;
+            --accent: #0ea5e9;
+            --text-dark: #1e293b;
+            --text-light: #f8fafc;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdnphoto.dantri.com.vn/JuodM5F9y1h9D6Rg4OY5E-6RyAU=/thumb_w/1020/2024/06/24/g1-1719204327732.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 50px;
+        }
+
+        .tour-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .tour-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tour-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .tour-content {
+            padding: 20px;
+        }
+
+        .tour-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .tour-price {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .hotel-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .hotel-content {
+            padding: 20px;
+        }
+
+        .hotel-rating {
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-illustration-icon-logo-3-people-and-circle-png-image_4151674.jpg"
+                alt="" style="border-radius: 50%; width: 50px;">
+            <h1>Sapa</h1>
+            <p>Sapa không chỉ là điểm đến, mà còn là hành trình tìm về sự bình yên giữa thiên nhiên.</p>
+            <a href="#tours" class="btn">Khám phá ngay</a>
+        </div>
+    </section>
+
+    <section id="tours" class="section">
+        <div class="container">
+            <h2 class="section-title">Tour du lịch nổi bật</h2>
+            <div class="tour-grid">
+                <div class="tour-card">
+                    <img src="https://dulichsapa.org.vn/wp-content/uploads/leo-dinh-fansipan-1.png"
+                        alt="Tour 2 ngày 1 đêm" class="tour-image">
+                    <div class="tour-content">
+                        <h3 class="tour-title">Tour 2 ngày 1 đêm</h3>
+                        <div class="tour-price">Từ 2,990,000 VNĐ</div>
+                        <p>Khám phá vẻ đẹp hùng vĩ của núi rừng Tây Bắc, tham quan bản Cát Cát, đỉnh Fansipan – nóc nhà
+                            Đông Dương, và thưởng thức ẩm thực đặc trưng của Sapa.</p>
+                        <a href="#contact" class="btn" style="margin-top: 15px">Đặt ngay</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="https://vietluxtour.com/Upload/images/2024/khamphatrongnuoc/Thung%20l%C5%A9ng%20M%C6%B0%E1%BB%9Dng%20Hoa/thung-lung-muong-hoa%20(3)-min.jpg"
+                        alt="Tour 3 ngày 2 đêm" class="tour-image">
+                    <div class="tour-content">
+                        <h3 class="tour-title">Tour 3 ngày 2 đêm</h3>
+                        <div class="tour-price">Từ 3,990,000 VNĐ</div>
+                        <p>Trải nghiệm Sapa trọn vẹn với hành trình 3 ngày 2 đêm, bao gồm trekking qua thung lũng Mường
+                            Hoa, giao lưu với đồng bào dân tộc, và ngắm bình minh trên đèo Ô Quy Hồ.
+                        </p>
+                        <a href="#contact" class="btn" style="margin-top: 15px">Đặt ngay</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="https://www.kkday.com/vi/blog/wp-content/uploads/tam-la-nguoi-dao-do-3.jpg"
+                        alt="Tour cao cấp" class="tour-image">
+                    <div class="tour-content">
+                        <h3 class="tour-title">Tour VIP</h3>
+                        <div class="tour-price">Từ 7,990,000 VNĐ</div>
+                        <p>Dành cho du khách muốn tận hưởng dịch vụ cao cấp với khách sạn 5 sao, trải nghiệm tắm lá
+                            thuốc của người Dao Đỏ, và du ngoạn bằng cáp treo lên Fansipan.</p>
+                        <a href="#contact" class="btn" style="margin-top: 15px">Đặt ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Khách sạn & Resort</h2>
+            <div class="hotel-grid">
+                <div class="hotel-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/300722242.jpg?k=315ba9b7a5427aa3ab757aca68b2f9de71e574d5939a2c7519d5e56ca11d0753&o=&hp=1"
+                        alt="Vinpearl Resort" class="hotel-image">
+                    <div class="hotel-content">
+                        <div class="hotel-rating">★★★★★</div>
+                        <h3>Hotel de la Coupole – MGallery</h3>
+                        <p>Khách sạn sang trọng mang phong cách châu Âu cổ điển, tọa lạc ngay trung tâm Sapa.</p>
+                        <a href="#contact" class="btn" style="margin-top: 15px">Đặt phòng</a>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/496236248.jpg?k=4c3c010addb52f8cf86890eca8021cd5b3cf4834c96f3134fb281f3eff563f98&o=&hp=1"
+                        alt="Paradise Hotel" class="hotel-image">
+                    <div class="hotel-content">
+                        <div class="hotel-rating">★★★★★</div>
+                        <h3>Silk Path Grand Resort & Spa</h3>
+                        <p>Resort cao cấp với view núi tuyệt đẹp, không gian yên tĩnh và dịch vụ spa chuyên nghiệp.</p>
+                        <a href="#contact" class="btn" style="margin-top: 15px">Đặt phòng</a>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <img src="" alt="Royal Hotel" class="hotel-image">
+                    <div class="hotel-content">
+                        <div class="hotel-rating">★★★★</div>
+                        <h3>BB Hotel Sapa</h3>
+                        <p>Khách sạn 4 sao tiện nghi, gần nhà thờ đá và chợ đêm Sapa.</p>
+                        <a href="#contact" class="btn" style="margin-top: 15px">Đặt phòng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Liên hệ đặt tour</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Họ tên</label>
+                        <input type="text" class="form-input" placeholder="Nhập họ tên của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="Nhập email của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Số điện thoại</label>
+                        <input type="tel" class="form-input" placeholder="Nhập số điện thoại của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Chọn tour</label>
+                        <select class="form-input">
+                            <option>Tour 2 ngày 1 đêm</option>
+                            <option>Tour 3 ngày 2 đêm</option>
+                            <option>Tour VIP</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ngày khởi hành</label>
+                        <input type="date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ghi chú</label>
+                        <textarea class="form-input" rows="4" placeholder="Nhập yêu cầu đặc biệt của bạn"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%">Gửi yêu cầu</button>
+                </form>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119407.31674542009!2d106.98699384726561!3d20.910396999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a5796518cad93%3A0x55c6adf8d16c1eb8!2zVuG7i25oIEjhuqEgTG9uZw!5e0!3m2!1svi!2s!4v1645123456789!5m2!1svi!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Vịnh Hạ Long Travel</h3>
+            <p>Địa chỉ: 168 Lê Thánh Tông, Hạ Long, Quảng Ninh</p>
+            <p>Hotline: 1900 1234</p>
+            <p>Email: info@halongtravel.com</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

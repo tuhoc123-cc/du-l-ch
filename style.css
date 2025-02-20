@@ -170,9 +170,71 @@ nav ul li a {
 }
 
 /* Footer */
-footer {
-  background: #333;
+
+/* footer */
+.footer {
+  background: #2e2100;
+  padding: 96px 135px 0;
+}
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column {
+  width: 21.6%;
+}
+.footer .row .column:first-child {
+  width: 35%;
+}
+.footer .desc {
+  margin-top: 18px;
+  max-width: 267px;
+  /* thuộc tính này có thể co lại khi kéo trang không làm vỡ giao diện trong khi người dùng thu nhỏ lại trang */
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+.footer .social {
+  gap: 18px;
+  margin-top: 18px;
+  display: flex;
+}
+.footer .title {
+  padding-bottom: 14px;
+  padding-right: 48px;
+  display: inline-block;
+  border-bottom: 1px solid #59554b;
   color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+.footer .list {
+  margin-top: 28px;
+}
+.footer .list a {
+  /* thẻ a mặc định nó là thẻ inline nên không margin padding được  */
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86; /* 185.714% */
+}
+.footer .copyright {
+  padding: 28px 0;
+  color: #807d74;
   text-align: center;
-  padding: 20px 0;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
 }
